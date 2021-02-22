@@ -2,7 +2,7 @@
 Repositório criado para a disciplina Linguagens I.
 
 # Desenvolvedor:
-## Gabriel Moreira Silva
+- Gabriel Moreira Silva
 
 # Linguaguens e Frameworks:
 - Java
