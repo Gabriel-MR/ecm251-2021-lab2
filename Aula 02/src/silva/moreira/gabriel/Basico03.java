@@ -24,6 +24,6 @@ public class Basico03 {
             chute = sorteador.nextInt(999999);
         }
         System.out.println("Parabens! Quase um craker!");
-        System.out.println("Levou apenas:" + tentativas);
+        System.out.println("Levou apenas:" + tentativas)
     }
 }
