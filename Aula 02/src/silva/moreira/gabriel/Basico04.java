@@ -23,7 +23,7 @@ public class Basico04 {
     }
 
     private static String achaCavaleiro(String mes) {
-        mes = mes.toLowerCase()
+        mes = mes.toLowerCase();
         if (mes.equals("janeiro")) return "Shura";
         else if (mes.equals("fevereiro")) return "Kanus";
         else if (mes.equals("março")) return "Albafica";
