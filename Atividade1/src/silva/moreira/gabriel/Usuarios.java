@@ -1,4 +1,3 @@
-
 //Gabriel Moreira Silva - 19.00397-8
 //Felipe Oliveira Boacnin - 19.00616-0
 
@@ -13,6 +12,10 @@ public class Usuarios {
         this.nome = nome;
         this. senha = senha;
         this.email = email;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     @Override
