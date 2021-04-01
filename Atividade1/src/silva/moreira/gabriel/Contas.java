@@ -1,4 +1,3 @@
-
 //Gabriel Moreira Silva - 19.00397-8
 //Felipe Oliveira Boacnin - 19.00616-0
 
@@ -9,22 +8,10 @@ public class Contas {
     private int idConta;
     private double saldo;
 
-    public Contas(Usuarios nome, int idConta, double saldo) {
+    public Contas(String nome, int idConta, double saldo) {
         this.usuario = new Usuarios(nome);
         this.idConta = idConta;
         this.saldo = saldo;
-    }
-
-    public Usuarios getUsuario() {
-        return usuario;
-    }
-
-    public int getIdConta() {
-        return idConta;
-    }
-
-    public double getSaldo() {
-        return saldo;
     }
 
     public void depositar(double valor){
@@ -39,20 +26,11 @@ public class Contas {
         return false;
     }
 
-    public boolean transferir(Contas destino, double valor){
-        if(sacar(valor)){
-            destino.depositar(valor);
-            return true;
+        public boolean transferir(Contas destino, double valor){
+            if(sacar(valor)){
+                destino.depositar(valor);
+                return true;
+            }
+            return false;
         }
-        return false;
-    }
-
-    @Override
-    public String toString() {
-        return "Contas{" +
-                "usuario=" + usuario +
-                ", idConta=" + idConta +
-                ", saldo=" + saldo +
-                '}';
-    }
 }
