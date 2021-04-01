@@ -15,6 +15,7 @@ public class Contas{
         this.saldo = saldo;
     }
 
+
     public Usuarios getUsuario(){
         return usuario;
     }
@@ -26,6 +27,7 @@ public class Contas{
     public double getSaldo(){
         return saldo;
     }
+
 
     public void depositar(double valor){
         this.saldo += valor;
