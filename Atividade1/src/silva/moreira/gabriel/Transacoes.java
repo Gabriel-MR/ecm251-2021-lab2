@@ -12,4 +12,11 @@ public class Transacoes {
         return r.nextInt((max - min) + 1) + min;
     }
 
+    public String qrCode(Contas conta, double valor){
+        return conta.getIdConta() + ";" + conta.getUsuario().getNome() + ";" + valor + ";" +  getRandomNumberInRange(1000,9999);
+    }
+
+
+
+
 }
