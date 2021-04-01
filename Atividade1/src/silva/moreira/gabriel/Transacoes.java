@@ -11,9 +11,11 @@ public class Transacoes {
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;
     }
-
+    
     public String qrCode(Contas conta, double valor){
         return conta.getIdConta() + ";" + conta.getUsuario().getNome() + ";" + valor + ";" +  getRandomNumberInRange(1000,9999);
+        String[] dados = Transacoes.qrCode().split(";");
+
     }
 
 
