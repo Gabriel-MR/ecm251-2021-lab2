@@ -14,9 +14,9 @@ public class Transacoes {
     
     public String qrCode(Contas conta, double valor){
         return conta.getIdConta() + ";" + conta.getUsuario().getNome() + ";" + valor + ";" +  getRandomNumberInRange(1000,9999);
-        String[] dados = Transacoes.qrCode().split(";");
 
     }
+    // String[] dados = Transacoes.qrCode().split(";");
 
 
 
