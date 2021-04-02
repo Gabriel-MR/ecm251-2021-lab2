@@ -16,9 +16,13 @@ public class Transacoes {
         return conta.getIdConta() + ";" + conta.getUsuario().getNome() + ";" + valor + ";" +  getRandomNumberInRange(1000,9999);
 
     }
-    // String[] dados = Transacoes.qrCode().split(";");
-
-
-
+    public boolean pagamento(Contas pagador, Contas recebedor, String s) {
+        String[] dados = s.split(";");
+        //Verificar se é possível fazer a transferência
+        //if( ){
+            pagador.transferir(recebedor, Double.parseDouble(dados[2]));
+            return true;
+        }
+        //return false;
 
 }
