@@ -1,4 +1,3 @@
-
 //Gabriel Moreira Silva - 19.00397-8
 //Felipe Oliveira Boacnin - 19.00616-0
 
@@ -9,13 +8,14 @@ public class Contas{
     private int idConta;
     private double saldo;
 
+    // Construtor
     public Contas(Usuarios usuario, int idConta, double saldo){
         this.usuario = usuario;
         this.idConta = idConta;
         this.saldo = saldo;
     }
 
-
+    // Getter
     public Usuarios getUsuario(){
         return usuario;
     }
@@ -28,7 +28,7 @@ public class Contas{
         return saldo;
     }
 
-
+    // Operações
     public void depositar(double valor){
         this.saldo += valor;
     }
