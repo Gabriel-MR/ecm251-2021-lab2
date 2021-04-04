@@ -8,12 +8,14 @@ public class Usuarios {
     private String senha;
     private String email;
 
+    // Construtor
     public Usuarios(String nome){
         this.nome = nome;
         this. senha = senha;
         this.email = email;
     }
 
+    // Getter
     public String getNome() {
         return nome;
     }
