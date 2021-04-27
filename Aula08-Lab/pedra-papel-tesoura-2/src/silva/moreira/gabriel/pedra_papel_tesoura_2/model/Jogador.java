@@ -1,4 +1,4 @@
-package silva.moreira.gabriel.pedra_papel_tesoura.model;
+package silva.moreira.gabriel.pedra_papel_tesoura_2.model;
 
 public class Jogador {
     private String nome;

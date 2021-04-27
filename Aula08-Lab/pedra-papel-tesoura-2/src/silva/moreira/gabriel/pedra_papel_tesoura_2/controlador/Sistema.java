@@ -1,9 +1,11 @@
-package silva.moreira.gabriel.pedra_papel_tesoura.controlador;
+package silva.moreira.gabriel.pedra_papel_tesoura_2.controlador;
 
-import silva.moreira.gabriel.pedra_papel_tesoura.model.*;
-import silva.moreira.gabriel.pedra_papel_tesoura.model.classico.Papel;
-import silva.moreira.gabriel.pedra_papel_tesoura.model.classico.Pedra;
-import silva.moreira.gabriel.pedra_papel_tesoura.model.classico.Tesoura;
+import silva.moreira.gabriel.pedra_papel_tesoura_2.model.*;
+import silva.moreira.gabriel.pedra_papel_tesoura_2.model.classico.Papel;
+import silva.moreira.gabriel.pedra_papel_tesoura_2.model.classico.Pedra;
+import silva.moreira.gabriel.pedra_papel_tesoura_2.model.classico.Tesoura;
+import silva.moreira.gabriel.pedra_papel_tesoura_2.model.jeff.Lagarto;
+import silva.moreira.gabriel.pedra_papel_tesoura_2.model.jeff.Spoke;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -11,7 +13,7 @@ import java.util.Scanner;
 public class Sistema {
     private Jogador player1, player2;
     private Scanner scanner;
-    private final Jogada[] jogadas = new Jogada[]{new Pedra(), new Papel(), new Tesoura()};
+    private final Jogada[] jogadas = new Jogada[]{new Pedra(), new Papel(), new Tesoura(), new Spoke(), new Lagarto()};
     public Sistema(){
         scanner = new Scanner(System.in);
         inicializarJogadores();
@@ -29,7 +31,10 @@ public class Sistema {
     }
 
     private Jogada escolheJogada() {
-        System.out.println("Informe sua jogada: \n0 - Pedra\n1 - Papel\n2 - Tesoura");
+        System.out.println("Informe sua jogada:");
+        for (int i = 0; i < jogadas.length; i++) {
+            System.out.println(""+ i + ":" + jogadas[i]);
+        }
         int escolha = scanner.nextInt();
         return jogadas[escolha];
     }

@@ -1,6 +1,6 @@
-package silva.moreira.gabriel.pedra_papel_tesoura;
+package silva.moreira.gabriel.pedra_papel_tesoura_2;
 
-import silva.moreira.gabriel.pedra_papel_tesoura.controlador.Sistema;
+import silva.moreira.gabriel.pedra_papel_tesoura_2.controlador.Sistema;
 
 public class Main {
 
