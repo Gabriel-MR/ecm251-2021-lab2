@@ -1,4 +1,4 @@
 package silva.moreira.gabriel.models;
 
-public class ScriptGuys {
+public class ScriptGuys extends Membro {
 }

@@ -1,4 +1,4 @@
 package silva.moreira.gabriel.models;
 
-public class HeavyLifters {
+public class HeavyLifters extends Membro {
 }
