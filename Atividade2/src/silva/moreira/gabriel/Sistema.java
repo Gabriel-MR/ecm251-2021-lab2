@@ -37,36 +37,36 @@ public class Sistema {
                 switch (cargo){
                     case 1:
                         System.out.println("Nome: ");
-                        String nome = scanner.next();
+                        String nome1 = scanner.next();
                         System.out.println("Id: ");
-                        int id = scanner.nextInt();
-                        mobileMembers = new MobileMembers(nome, id);
+                        int id1 = scanner.nextInt();
+                        mobileMembers = new MobileMembers(nome1, id1);
 
                         break;
                     case 2:
                         System.out.println("Nome: ");
-                        String nome = scanner.next();
+                        String nome2 = scanner.next();
                         System.out.println("Id: ");
-                        int id = scanner.nextInt();
-                        heavyLifters = new HeavyLifters(nome, id);
+                        int id2 = scanner.nextInt();
+                        heavyLifters = new HeavyLifters(nome2, id2);
 
                         break;
 
                     case 3:
                         System.out.println("Nome: ");
-                        String nome = scanner.next();
+                        String nome3 = scanner.next();
                         System.out.println("Id: ");
-                        int id = scanner.nextInt();
-                        scriptGuys = new ScriptGuys(nome, id);
+                        int id3 = scanner.nextInt();
+                        scriptGuys = new ScriptGuys(nome3, id3);
 
                         break;
 
                     case 4:
                         System.out.println("Nome: ");
-                        String nome = scanner.next();
+                        String nome4 = scanner.next();
                         System.out.println("Id: ");
-                        int id = scanner.nextInt();
-                        bigBrothers = new BigBrothers(nome, id);
+                        int id4 = scanner.nextInt();
+                        bigBrothers = new BigBrothers(nome4, id4);
 
                         break;
 
