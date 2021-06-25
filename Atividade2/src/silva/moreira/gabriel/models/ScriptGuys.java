@@ -6,8 +6,8 @@ import silva.moreira.gabriel.interfaces.PostarMensagem;
 
 // Heranca de Membros e interface PostarMensagem
 public class ScriptGuys extends Membro implements PostarMensagem {
-    public ScriptGuys(String nome, int id){
-        super(nome, id, Cargos.ScriptGuys, Turnos.Regular);
+    public ScriptGuys(String nome, String email){
+        super(nome, email, Cargos.ScriptGuys, Turnos.Regular);
         super.mensagem = PostarMensagem();
     }
 

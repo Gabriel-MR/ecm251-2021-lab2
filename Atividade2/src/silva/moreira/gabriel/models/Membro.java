@@ -6,17 +6,18 @@ import silva.moreira.gabriel.interfaces.Apresentacao;
 
 public abstract class Membro implements Apresentacao {
     protected String nome;
-    protected int id;
+    protected String email;
     protected Cargos cargo;
     protected String mensagem;
     protected Turnos turnos;
 
     // Construtor
-    public Membro(String nome, int id, Cargos cargo, Turnos turnos) {
+    public Membro(String nome, String email, Cargos cargo, Turnos turnos) {
         this.nome = nome;
-        this.id = id;
+        this.email = email;
         this.cargo = cargo;
         this.turnos = turnos;
+
     }
 
     // Getters
@@ -24,8 +25,8 @@ public abstract class Membro implements Apresentacao {
         return nome;
     }
 
-    public int getId() {
-        return id;
+    public String getEmail(){
+        return email;
     }
 
     public Cargos getCargo() {
@@ -50,12 +51,11 @@ public abstract class Membro implements Apresentacao {
     }
 
 
-    // toString Apresentação
     @Override
     public String toString() {
         return "Membro{" +
                 "nome='" + nome + '\'' +
-                ", id=" + id +
+                ", email='" + email + '\'' +
                 ", cargo=" + cargo +
                 ", turnos=" + turnos +
                 '}';

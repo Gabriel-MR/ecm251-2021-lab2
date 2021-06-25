@@ -6,8 +6,8 @@ import silva.moreira.gabriel.interfaces.PostarMensagem;
 
 // Heranca de Membros e interface PostarMensagem
 public class MobileMembers extends Membro implements PostarMensagem {
-    public MobileMembers(String nome, int id){
-        super(nome, id, Cargos.MobileMembers, Turnos.Regular);
+    public MobileMembers(String nome,String email){
+        super(nome, email, Cargos.MobileMembers, Turnos.Regular);
         super.mensagem = PostarMensagem();
     }
 

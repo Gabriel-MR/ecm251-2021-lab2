@@ -6,8 +6,8 @@ import silva.moreira.gabriel.interfaces.PostarMensagem;
 
 // Heranca de Membros e interface PostarMensagem
 public class HeavyLifters extends Membro implements PostarMensagem {
-    public HeavyLifters(String nome, int id){
-        super(nome, id, Cargos.HeavyLifters, Turnos.Regular);
+    public HeavyLifters(String nome, String email){
+        super(nome, email, Cargos.HeavyLifters, Turnos.Regular);
         super.mensagem = PostarMensagem();
     }
 
