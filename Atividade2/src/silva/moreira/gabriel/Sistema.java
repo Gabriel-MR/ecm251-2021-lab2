@@ -40,16 +40,16 @@ public class Sistema {
                         System.out.println("Nome: ");
                         String nome1 = scanner.next();
                         System.out.println("Id: ");
-                        int id1 = scanner.nextInt();
-                        mobileMembers = new MobileMembers(nome1, id1);
+                        String email1 = scanner.next();
+                        mobileMembers = new MobileMembers(nome1, email1);
 
                         break;
                     case 2:
                         System.out.println("Nome: ");
                         String nome2 = scanner.next();
                         System.out.println("Id: ");
-                        int id2 = scanner.nextInt();
-                        heavyLifters = new HeavyLifters(nome2, id2);
+                        String email2 = scanner.next();
+                        heavyLifters = new HeavyLifters(nome2, email2);
 
                         break;
 
@@ -57,8 +57,8 @@ public class Sistema {
                         System.out.println("Nome: ");
                         String nome3 = scanner.next();
                         System.out.println("Id: ");
-                        int id3 = scanner.nextInt();
-                        scriptGuys = new ScriptGuys(nome3, id3);
+                        String email3 = scanner.next();
+                        scriptGuys = new ScriptGuys(nome3, email3);
 
                         break;
 
@@ -66,8 +66,8 @@ public class Sistema {
                         System.out.println("Nome: ");
                         String nome4 = scanner.next();
                         System.out.println("Id: ");
-                        int id4 = scanner.nextInt();
-                        bigBrothers = new BigBrothers(nome4, id4);
+                        String email4 = scanner.next();
+                        bigBrothers = new BigBrothers(nome4, email4);
 
                         break;
 
@@ -79,7 +79,7 @@ public class Sistema {
                 case 2:
                     System.out.println("nome: ");
                     String nome5 = scanner.next();
-                    Membro pesquisa;
+                    Membro pesquisa = null;
                     for (Membro membro : Membros){
                         if (nome5.equals(membro.getNome())){
                             pesquisa = membro;
@@ -111,12 +111,6 @@ public class Sistema {
                     }
                     Membros.remove();
                     menu();
-
-                    cas
-
-
-
-
 
             }
         }while (op != 0);
