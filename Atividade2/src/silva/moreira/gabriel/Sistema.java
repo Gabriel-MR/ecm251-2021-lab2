@@ -77,8 +77,16 @@ public class Sistema {
 
                 case 2:
                     System.out.println("nome: ");
-                    String nome = scanner.next();
-                    break;
+                    String nome5 = scanner.next();
+                    Membro pesquisa;
+                    for (Membro membro : Membros){
+                        if (nome5.equals(membro.getNome())){
+                            pesquisa = membro;
+                            break;
+                        }
+                    }
+                    System.out.println(pesquisa.getTurnos());
+                    menu();
 
                 case 3:
                     for (Membro membro : Membros){
