@@ -38,6 +38,8 @@ public class Sistema {
                 System.out.println("4 - Big Brother");
                 int cargo = scanner.nextInt();
                 switch (cargo){
+                    case 0:
+                        System.exit();
                     case 1:
                         System.out.println("Nome: ");
                         String nome1 = scanner.next();
@@ -112,6 +114,9 @@ public class Sistema {
                     fileWriter.close();
                     menu();
                     break;
+
+                default:
+                    System.out.println("Opcao invalida");
             }
         }while (op != 0);
     }
