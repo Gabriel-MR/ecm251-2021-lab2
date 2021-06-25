@@ -5,19 +5,18 @@ import silva.moreira.gabriel.models.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Sistema {
 
-    ArrayList<Membro> Membros = new ArrayList<Membro>();
+    ArrayList<Membro> Membros = new ArrayList<>();
     MobileMembers mobileMembers;
     HeavyLifters heavyLifters;
     ScriptGuys scriptGuys;
     BigBrothers bigBrothers;
 
-    private Scanner scanner;
-    
+    private final Scanner scanner;
+
     public  Sistema(){
         scanner = new Scanner(System.in);
     }
@@ -94,6 +93,7 @@ public class Sistema {
                             break;
                         }
                     }
+                    assert pesquisa != null;
                     System.out.println(pesquisa.getTurnos());
                     menu();
 
@@ -113,7 +113,7 @@ public class Sistema {
                     fileWriter.write("Membros: \n");
                     for (Membro membro : Membros) {
                         id += 1;
-                        fileWriter.append(membro.getCargo() + " ; " + membro.getNome() + " ; " + id + "\n");
+                        fileWriter.append(String.valueOf(membro.getCargo())).append(" ; ").append(membro.getNome()).append(" ; ").append(String.valueOf(id)).append("\n");
                     }
                     fileWriter.close();
                     menu();
@@ -122,7 +122,7 @@ public class Sistema {
                 default:
                     System.out.println("Opcao invalida");
             }
-        }while (op != 0);
+        }while (true);
     }
 }
 
