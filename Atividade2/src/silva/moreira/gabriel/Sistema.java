@@ -2,6 +2,8 @@ package silva.moreira.gabriel;
 
 import silva.moreira.gabriel.models.*;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -16,13 +18,13 @@ public class Sistema {
 
     private Scanner scanner;
 
-    public void menu(){
+    public void menu() throws IOException {
         System.out.println("Bem-vindo!");
         System.out.println("1 - Registrar membros");
         System.out.println("2 - Horário de trabalho");
         System.out.println("3 - Postar mensagem");
         System.out.println("4 - Mudar turno");
-        System.out.println("5 - Deletar membros");
+        System.out.println("5 - Gerar arquivo com os membros");
         System.out.println("0 - Sair");
         int op = scanner.nextInt();
 
@@ -93,25 +95,23 @@ public class Sistema {
                     for (Membro membro : Membros){
                         System.out.println(membro.getNome() + membro.getMensagem());
                     }
-                    break;
                     menu();
+                    break;
 
                 case 4:
                     break;
 
                 case 5:
-                    System.out.println("nome: ");
-                    String remover = scanner.next();
-
-                    for(Membro membro : Membros){
-                        if(remover.equals(membro.getNome())){
-                            // achou membro
-                            break;
-                        }
+                    int id = 0;
+                    FileWriter fileWriter = new FileWriter("arquivo_super_Secreto_nao_abrir.csv", true);
+                    fileWriter.write("Membros: \n");
+                    for (Membro membro : Membros) {
+                        id += 1;
+                        fileWriter.append(membro.getCargo() + " ; " + membro.getNome() + " ; " + id + "\n");
                     }
-                    Membros.remove();
+                    fileWriter.close();
                     menu();
-
+                    break;
             }
         }while (op != 0);
     }
