@@ -21,7 +21,7 @@ public class Sistema {
         System.out.println("1 - Registrar membros");
         System.out.println("2 - Horário de trabalho");
         System.out.println("3 - Postar mensagem");
-        System.out.println("4 - Mudar horário de trabalho");
+        System.out.println("4 - Mudar turno");
         System.out.println("0 - Sair");
         int op = scanner.nextInt();
 
@@ -94,6 +94,23 @@ public class Sistema {
                     }
                     break;
                     menu();
+
+                case 4:
+                    break;
+
+                case 5:
+                    System.out.println("nome: ");
+                    String remover = scanner.next();
+
+                    for(Membro membro : Membros){
+                        if(remover.equals(membro.getNome())){
+                            // achou membro
+                            break;
+                        }
+                    }
+                    Membros.remove();
+                    menu();
+
 
 
 
