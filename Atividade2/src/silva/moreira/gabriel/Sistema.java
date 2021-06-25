@@ -17,6 +17,10 @@ public class Sistema {
     BigBrothers bigBrothers;
 
     private Scanner scanner;
+    
+    public  Sistema(){
+        scanner = new Scanner(System.in);
+    }
 
     public void menu() throws IOException {
         System.out.println("Bem-vindo!");
