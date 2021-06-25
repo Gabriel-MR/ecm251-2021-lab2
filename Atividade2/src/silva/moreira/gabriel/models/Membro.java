@@ -25,10 +25,6 @@ public abstract class Membro implements Apresentacao {
         return nome;
     }
 
-    public String getEmail(){
-        return email;
-    }
-
     public Cargos getCargo() {
         return cargo;
     }
@@ -40,16 +36,6 @@ public abstract class Membro implements Apresentacao {
     public Turnos getTurnos() {
         return turnos;
     }
-
-    // Setters
-    public void setMensagem(String mensagem) {
-        this.mensagem = mensagem;
-    }
-
-    public void setTurnos(Turnos turnos) {
-        this.turnos = turnos;
-    }
-
 
     @Override
     public String toString() {
