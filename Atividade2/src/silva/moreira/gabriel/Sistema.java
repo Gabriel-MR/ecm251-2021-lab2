@@ -22,6 +22,7 @@ public class Sistema {
         System.out.println("2 - Horário de trabalho");
         System.out.println("3 - Postar mensagem");
         System.out.println("4 - Mudar turno");
+        System.out.println("5 - Deletar membros");
         System.out.println("0 - Sair");
         int op = scanner.nextInt();
 
@@ -110,6 +111,8 @@ public class Sistema {
                     }
                     Membros.remove();
                     menu();
+
+                    cas
 
 
 
