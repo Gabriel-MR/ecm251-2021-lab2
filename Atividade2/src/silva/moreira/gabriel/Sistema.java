@@ -31,7 +31,7 @@ public class Sistema {
         do {
             switch (op){
                 case 0:
-                    System.exit();
+                    System.exit(0);
                 case 1:
                     System.out.println("Cargo do membro: \n");
                     System.out.println("1 - Mobile Member");
