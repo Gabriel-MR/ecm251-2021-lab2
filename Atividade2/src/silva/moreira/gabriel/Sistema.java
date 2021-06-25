@@ -73,7 +73,18 @@ public class Sistema {
                 menu();
 
                 case 2:
-                    System.out.println("");
+                    System.out.println("nome: ");
+                    String nome = scanner.next();
+                    break;
+
+                case 3:
+                    for (:){
+                        System.out.println();
+
+                    }
+                    break;
+
+
 
 
             }
