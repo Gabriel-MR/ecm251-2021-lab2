@@ -2,10 +2,13 @@ package silva.moreira.gabriel;
 
 import silva.moreira.gabriel.models.*;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Sistema {
+
+    ArrayList<Membro> Membros = new ArrayList<Membro>();
     MobileMembers mobileMembers;
     HeavyLifters heavyLifters;
     ScriptGuys scriptGuys;
@@ -78,11 +81,11 @@ public class Sistema {
                     break;
 
                 case 3:
-                    for (:){
-                        System.out.println();
-
+                    for (Membro membro : Membros){
+                        System.out.println(membro.getNome() + membro.getMensagem());
                     }
                     break;
+                    menu();
 
 
 
