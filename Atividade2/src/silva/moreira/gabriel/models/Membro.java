@@ -37,6 +37,16 @@ public abstract class Membro implements Apresentacao {
         return turnos;
     }
 
+    // Setters
+
+    public void setTurnos(Turnos turnos) {
+        this.turnos = turnos;
+    }
+
+    public void setMensagem(String mensagem) {
+        this.mensagem = mensagem;
+    }
+
     @Override
     public String toString() {
         return "Membro{" +
