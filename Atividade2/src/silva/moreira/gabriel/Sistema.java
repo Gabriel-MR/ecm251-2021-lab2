@@ -46,7 +46,7 @@ public class Sistema {
                         case 1:
                             System.out.println("Nome: ");
                             String nome1 = scanner.next();
-                            System.out.println("Id: ");
+                            System.out.println("E-mail: ");
                             String email1 = scanner.next();
                             mobileMembers = new MobileMembers(nome1, email1);
 
@@ -54,7 +54,7 @@ public class Sistema {
                         case 2:
                             System.out.println("Nome: ");
                             String nome2 = scanner.next();
-                            System.out.println("Id: ");
+                            System.out.println("E-mail: ");
                             String email2 = scanner.next();
                             heavyLifters = new HeavyLifters(nome2, email2);
 
@@ -63,7 +63,7 @@ public class Sistema {
                         case 3:
                             System.out.println("Nome: ");
                             String nome3 = scanner.next();
-                            System.out.println("Id: ");
+                            System.out.println("E-mail: ");
                             String email3 = scanner.next();
                             scriptGuys = new ScriptGuys(nome3, email3);
 
@@ -72,7 +72,7 @@ public class Sistema {
                         case 4:
                             System.out.println("Nome: ");
                             String nome4 = scanner.next();
-                            System.out.println("Id: ");
+                            System.out.println("E-mail: ");
                             String email4 = scanner.next();
                             bigBrothers = new BigBrothers(nome4, email4);
 
