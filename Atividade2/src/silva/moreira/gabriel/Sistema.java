@@ -1,6 +1,5 @@
 package silva.moreira.gabriel;
 
-import silva.moreira.gabriel.enums.Cargos;
 import silva.moreira.gabriel.enums.Turnos;
 import silva.moreira.gabriel.models.*;
 
@@ -109,7 +108,7 @@ public class Sistema {
                 case 4:
                     // Lista de membros
                     for (Membro membro : Membros){
-                        System.out.println(membro.getNome());
+                        System.out.println(membro.getNome()+"\n");
                     }
 
                     System.out.println("Nome: ");
@@ -117,34 +116,20 @@ public class Sistema {
 
                     // Mudar o turno: erro
                     for (Membro membro : Membros) {
-                        if (nome6.equals(membro.getNome())){
-                            if (membro.getTurnos() == Turnos.Regular){
-                                membro.setTurnos(Turnos.Extra);
+                        if (nome6.equals(membro.getNome())) {
+                            if (membro.getTurnos() == Turnos.Regular) {
                                 System.out.println("Mudanca de turno para extra");
+                                membro.setTurnos(Turnos.Extra);
                                 break;
-                            }
-                            else if (membro.getTurnos() == Turnos.Extra){
-                                membro.setTurnos(Turnos.Regular);
+
+                            } else if (membro.getTurnos() == Turnos.Extra) {
                                 System.out.println("Mudanca de turno para regular");
+                                membro.setTurnos(Turnos.Regular);
                                 break;
                             }
                         }
-
-                        if (membro.getCargo() == Cargos.MobileMembers){
-                            membro.setMensagem(mobileMembers.PostarMensagem());
-                        }
-                        else if (membro.getCargo() == Cargos.HeavyLifters){
-                            membro.setMensagem(heavyLifters.PostarMensagem());
-                        }
-
-                        else if (membro.getCargo() == Cargos.ScriptGuys){
-                            membro.setMensagem(scriptGuys.PostarMensagem());
-                        }
-                        else if (membro.getCargo() == Cargos.BigBrothers){
-                            membro.setMensagem(bigBrothers.PostarMensagem());
-                        }
+                        System.out.println(membro.getNome() +": " + membro.getMensagem());
                     }
-                    break;
 
                 case 5:
                     int id = 0;
