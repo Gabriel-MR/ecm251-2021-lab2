@@ -107,6 +107,7 @@ public class Sistema {
                     break;
 
                 case 4:
+                    // Lista de membros
                     for (Membro membro : Membros){
                         System.out.println(membro.getNome());
                     }
@@ -114,6 +115,7 @@ public class Sistema {
                     System.out.println("Nome: ");
                     String nome6 = scanner.next();
 
+                    // Mudar o turno: erro
                     for (Membro membro : Membros) {
                         if (nome6.equals(membro.getNome())){
                             if (membro.getTurnos() == Turnos.Regular){
@@ -127,6 +129,7 @@ public class Sistema {
                                 break;
                             }
                         }
+
                         if (membro.getCargo() == Cargos.MobileMembers){
                             membro.setMensagem(mobileMembers.PostarMensagem());
                         }
