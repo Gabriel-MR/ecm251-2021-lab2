@@ -14,7 +14,7 @@ public class HeavyLifters extends Membro implements PostarMensagem {
 
     public HeavyLifters(String nome, String email){
         super(nome, email, Cargos.HeavyLifters, Turnos.Regular);
-        super.mensagem = PostarMensagem();
+        super.mensagem = postarMensagem();
     }
 
     /**
@@ -23,7 +23,7 @@ public class HeavyLifters extends Membro implements PostarMensagem {
      */
 
     @Override
-    public String PostarMensagem() {
+    public String postarMensagem() {
         if (this.getTurnos() == Turnos.Regular){
             return "Podem contar conosco!";
         }else {

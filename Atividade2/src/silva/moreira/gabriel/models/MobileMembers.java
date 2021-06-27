@@ -15,7 +15,7 @@ public class MobileMembers extends Membro implements PostarMensagem {
 
     public MobileMembers(String nome,String email){
         super(nome, email, Cargos.MobileMembers, Turnos.Regular);
-        super.mensagem = PostarMensagem();
+        super.mensagem = postarMensagem();
     }
 
     /**
@@ -24,7 +24,7 @@ public class MobileMembers extends Membro implements PostarMensagem {
      */
 
     @Override
-    public String PostarMensagem() {
+    public String postarMensagem() {
         if (this.getTurnos() == Turnos.Regular){
             return "Happy Coding!";
         }else {

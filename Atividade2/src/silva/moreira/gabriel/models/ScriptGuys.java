@@ -14,7 +14,7 @@ public class ScriptGuys extends Membro implements PostarMensagem {
 
     public ScriptGuys(String nome, String email){
         super(nome, email, Cargos.ScriptGuys, Turnos.Regular);
-        super.mensagem = PostarMensagem();
+        super.mensagem = postarMensagem();
     }
 
     /**
@@ -23,7 +23,7 @@ public class ScriptGuys extends Membro implements PostarMensagem {
      */
 
     @Override
-    public String PostarMensagem() {
+    public String postarMensagem() {
         if (this.getTurnos() == Turnos.Regular){
             return "Prazer em ajudar novos amigos de código!";
         }else {

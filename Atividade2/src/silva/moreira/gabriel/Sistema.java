@@ -142,26 +142,26 @@ public class Sistema {
                                 System.out.println("Mudanca de turno para extra");
                                 membro.setTurnos(Turnos.Extra);
                                 if (membro.getCargo() == Cargos.MobileMembers)
-                                    membro.setMensagem(mobileMembers.PostarMensagem());
+                                    membro.setMensagem(mobileMembers.postarMensagem());
                                 else if (membro.getCargo() == Cargos.HeavyLifters)
-                                    membro.setMensagem(heavyLifters.PostarMensagem());
+                                    membro.setMensagem(heavyLifters.postarMensagem());
                                 else if (membro.getCargo() == Cargos.ScriptGuys)
-                                    membro.setMensagem(scriptGuys.PostarMensagem());
+                                    membro.setMensagem(scriptGuys.postarMensagem());
                                 else if (membro.getCargo() == Cargos.BigBrothers)
-                                    membro.setMensagem(bigBrothers.PostarMensagem());
+                                    membro.setMensagem(bigBrothers.postarMensagem());
                                 break;
 
                             } else if (membro.getTurnos() == Turnos.Extra) {
                                 System.out.println("Mudanca de turno para regular");
                                 membro.setTurnos(Turnos.Regular);
                                 if (membro.getCargo() == Cargos.MobileMembers)
-                                    membro.setMensagem(mobileMembers.PostarMensagem());
+                                    membro.setMensagem(mobileMembers.postarMensagem());
                                 else if (membro.getCargo() == Cargos.HeavyLifters)
-                                    membro.setMensagem(heavyLifters.PostarMensagem());
+                                    membro.setMensagem(heavyLifters.postarMensagem());
                                 else if (membro.getCargo() == Cargos.ScriptGuys)
-                                    membro.setMensagem(scriptGuys.PostarMensagem());
+                                    membro.setMensagem(scriptGuys.postarMensagem());
                                 else if (membro.getCargo() == Cargos.BigBrothers)
-                                    membro.setMensagem(bigBrothers.PostarMensagem());
+                                    membro.setMensagem(bigBrothers.postarMensagem());
                                 break;
                             }
                         }

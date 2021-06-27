@@ -14,7 +14,7 @@ public class BigBrothers extends Membro implements PostarMensagem {
 
     public BigBrothers(String nome, String email){
         super(nome, email, Cargos.BigBrothers, Turnos.Regular);
-        super.mensagem = PostarMensagem();
+        super.mensagem = postarMensagem();
     }
 
     /**
@@ -23,7 +23,7 @@ public class BigBrothers extends Membro implements PostarMensagem {
      */
 
     @Override
-    public String PostarMensagem() {
+    public String postarMensagem() {
         if (this.getTurnos() == Turnos.Regular){
             return "Sempre ajudando as pessoas membros ou não S2!";
         }else {
