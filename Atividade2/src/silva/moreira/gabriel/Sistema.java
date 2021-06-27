@@ -31,18 +31,22 @@ public class Sistema {
         System.out.println("4 - Mudar turno");
         System.out.println("5 - Gerar arquivo com os membros");
         System.out.println("0 - Sair");
+        System.out.println("Opcao: ");
         int op = scanner.nextInt();
 
         do {
             switch (op){
                 case 0:
+                    System.out.println("Sistema encerrado!");
                     System.exit(0);
+
                 case 1:
                     System.out.println("Cargo do membro: \n");
                     System.out.println("1 - Mobile Member");
                     System.out.println("2 - Heavy Lifter");
                     System.out.println("3 - Script Guy");
                     System.out.println("4 - Big Brother");
+                    System.out.println("Opcao: ");
                     int cargo = scanner.nextInt();
                     switch (cargo){
                         case 1:
@@ -159,12 +163,14 @@ public class Sistema {
                         id += 1;
                         fileWriter.append(String.valueOf(membro.getCargo())).append(" ; ").append(membro.getNome()).append(" ; ").append(String.valueOf(id)).append("\n");
                     }
+                    System.out.println("Arquivo gerado/atualizado");
                     fileWriter.close();
                     menu();
                     break;
 
                 default:
                     System.out.println("Opcao invalida");
+                    menu();
             }
         }while (true);
     }
