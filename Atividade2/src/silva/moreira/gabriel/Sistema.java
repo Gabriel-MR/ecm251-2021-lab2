@@ -11,19 +11,31 @@ import java.util.Scanner;
 
 public class Sistema {
 
+    /**
+     * Atributos
+     */
+
     ArrayList<Membro> Membros = new ArrayList<>();
     MobileMembers mobileMembers;
     HeavyLifters heavyLifters;
     ScriptGuys scriptGuys;
     BigBrothers bigBrothers;
 
-    private final Scanner scanner;
+    /**
+     * Iniciar o sistema
+     */
 
+    private final Scanner scanner;
     public  Sistema(){
         scanner = new Scanner(System.in);
     }
 
+    /**
+     * Menu principal das funcoes
+     */
+
     public void menu() throws IOException {
+
         System.out.println("Bem-vindo!");
         System.out.println("1 - Registrar membros");
         System.out.println("2 - Turno de trabalho");
@@ -36,6 +48,7 @@ public class Sistema {
 
         do {
             switch (op){
+
                 case 0:
                     System.out.println("Sistema encerrado!");
                     System.exit(0);

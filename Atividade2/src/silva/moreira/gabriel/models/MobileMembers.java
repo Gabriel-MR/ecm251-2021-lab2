@@ -4,14 +4,25 @@ import silva.moreira.gabriel.enums.Cargos;
 import silva.moreira.gabriel.enums.Turnos;
 import silva.moreira.gabriel.interfaces.PostarMensagem;
 
-// Heranca de Membros e interface PostarMensagem
+
 public class MobileMembers extends Membro implements PostarMensagem {
+
+    /**
+     * Heranca de Membros e interface PostarMensagem
+     * @param nome nome do membro
+     * @param email email do membro
+     */
+
     public MobileMembers(String nome,String email){
         super(nome, email, Cargos.MobileMembers, Turnos.Regular);
         super.mensagem = PostarMensagem();
     }
 
-    // Interface PostarMensagem
+    /**
+     * Mensagem para postar do membro mobileMembers de acordo com o turno
+     * @return mensagem para postar
+     */
+
     @Override
     public String PostarMensagem() {
         if (this.getTurnos() == Turnos.Regular){
