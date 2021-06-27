@@ -38,10 +38,11 @@ public class Sistema {
 
         System.out.println("Bem-vindo!");
         System.out.println("1 - Registrar membros");
-        System.out.println("2 - Turno de trabalho");
-        System.out.println("3 - Postar mensagem");
-        System.out.println("4 - Mudar turno");
-        System.out.println("5 - Gerar arquivo com os membros");
+        System.out.println("2 - Apresentacao membros");
+        System.out.println("3 - Turno de trabalho");
+        System.out.println("4 - Postar mensagem");
+        System.out.println("5 - Mudar turno");
+        System.out.println("6 - Gerar arquivo com os membros");
         System.out.println("0 - Sair");
         System.out.println("Opcao: ");
         int op = scanner.nextInt();
@@ -104,6 +105,13 @@ public class Sistema {
 
                 case 2:
                     for (Membro membro : Membros){
+                        System.out.println(membro.apresentacao());
+                    }
+                    menu();
+                    break;
+
+                case 3:
+                    for (Membro membro : Membros){
                         System.out.println("- " + membro.getNome());
                     }
 
@@ -120,14 +128,14 @@ public class Sistema {
                     System.out.println(pesquisa.getTurnos());
                     menu();
 
-                case 3:
+                case 4:
                     for (Membro membro : Membros){
                         System.out.println(membro.getNome() +": " + membro.getMensagem());
                     }
                     menu();
                     break;
 
-                case 4:
+                case 5:
                     // Lista de membros
                     for (Membro membro : Membros){
                         System.out.println(membro.apresentacao());
@@ -168,7 +176,7 @@ public class Sistema {
                     }
                     menu();
 
-                case 5:
+                case 6:
                     int id = 0;
                     FileWriter fileWriter = new FileWriter("arquivo_super_Secreto_nao_abrir.csv", true);
                     fileWriter.write("Membros: \n");
