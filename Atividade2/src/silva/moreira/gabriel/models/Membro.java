@@ -11,7 +11,6 @@ public abstract class Membro implements Apresentacao {
     protected String mensagem;
     protected Turnos turnos;
 
-    // Construtor
     public Membro(String nome, String email, Cargos cargo, Turnos turnos) {
         this.nome = nome;
         this.email = email;
@@ -20,7 +19,6 @@ public abstract class Membro implements Apresentacao {
 
     }
 
-    // Getters
     public String getNome() {
         return nome;
     }
@@ -37,8 +35,6 @@ public abstract class Membro implements Apresentacao {
         return turnos;
     }
 
-    // Setters
-
     public void setTurnos(Turnos turnos) {
         this.turnos = turnos;
     }
@@ -46,9 +42,10 @@ public abstract class Membro implements Apresentacao {
     public void setMensagem(String mensagem) {
         this.mensagem = mensagem;
     }
+    
 
     @Override
-    public String toString() {
+    public String membros() {
         return "Membro{" +
                 "nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
