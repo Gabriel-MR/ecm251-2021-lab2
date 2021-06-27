@@ -1,5 +1,6 @@
 package silva.moreira.gabriel;
 
+import silva.moreira.gabriel.enums.Cargos;
 import silva.moreira.gabriel.enums.Turnos;
 import silva.moreira.gabriel.models.*;
 
@@ -123,11 +124,27 @@ public class Sistema {
                             if (membro.getTurnos() == Turnos.Regular) {
                                 System.out.println("Mudanca de turno para extra");
                                 membro.setTurnos(Turnos.Extra);
+                                if (membro.getCargo() == Cargos.MobileMembers)
+                                    membro.setMensagem(mobileMembers.PostarMensagem());
+                                else if (membro.getCargo() == Cargos.HeavyLifters)
+                                    membro.setMensagem(heavyLifters.PostarMensagem());
+                                else if (membro.getCargo() == Cargos.ScriptGuys)
+                                    membro.setMensagem(scriptGuys.PostarMensagem());
+                                else if (membro.getCargo() == Cargos.BigBrothers)
+                                    membro.setMensagem(bigBrothers.PostarMensagem());
                                 break;
 
                             } else if (membro.getTurnos() == Turnos.Extra) {
                                 System.out.println("Mudanca de turno para regular");
                                 membro.setTurnos(Turnos.Regular);
+                                if (membro.getCargo() == Cargos.MobileMembers)
+                                    membro.setMensagem(mobileMembers.PostarMensagem());
+                                else if (membro.getCargo() == Cargos.HeavyLifters)
+                                    membro.setMensagem(heavyLifters.PostarMensagem());
+                                else if (membro.getCargo() == Cargos.ScriptGuys)
+                                    membro.setMensagem(scriptGuys.PostarMensagem());
+                                else if (membro.getCargo() == Cargos.BigBrothers)
+                                    membro.setMensagem(bigBrothers.PostarMensagem());
                                 break;
                             }
                         }
