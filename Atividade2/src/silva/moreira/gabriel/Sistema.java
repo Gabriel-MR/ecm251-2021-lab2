@@ -85,6 +85,10 @@ public class Sistema {
                     menu();
 
                 case 2:
+                    for (Membro membro : Membros){
+                        System.out.println("- " + membro.getNome());
+                    }
+
                     System.out.println("nome: ");
                     String nome5 = scanner.next();
                     Membro pesquisa = null;
@@ -108,13 +112,12 @@ public class Sistema {
                 case 4:
                     // Lista de membros
                     for (Membro membro : Membros){
-                        System.out.println(membro.getNome()+"\n");
+                        System.out.println("- " + membro.getNome());
                     }
 
                     System.out.println("Nome: ");
                     String nome6 = scanner.next();
 
-                    // Mudar o turno: erro
                     for (Membro membro : Membros) {
                         if (nome6.equals(membro.getNome())) {
                             if (membro.getTurnos() == Turnos.Regular) {
@@ -128,7 +131,6 @@ public class Sistema {
                                 break;
                             }
                         }
-                        System.out.println(membro.getNome() +": " + membro.getMensagem());
                     }
 
                 case 5:
