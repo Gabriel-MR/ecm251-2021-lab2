@@ -130,7 +130,7 @@ public class Sistema {
                 case 4:
                     // Lista de membros
                     for (Membro membro : Membros){
-                        System.out.println("- " + membro.getNome());
+                        System.out.println(membro.apresentacao());
                     }
 
                     System.out.println("Nome: ");

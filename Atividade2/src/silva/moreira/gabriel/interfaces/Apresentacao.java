@@ -5,5 +5,5 @@ package silva.moreira.gabriel.interfaces;
  */
 
 public interface Apresentacao {
-    String membros();
+    String apresentacao();
 }

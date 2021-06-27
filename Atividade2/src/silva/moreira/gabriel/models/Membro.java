@@ -91,7 +91,7 @@ public abstract class Membro implements Apresentacao {
      */
 
     @Override
-    public String membros() {
+    public String apresentacao() {
         return "Membro{" +
                 "nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
