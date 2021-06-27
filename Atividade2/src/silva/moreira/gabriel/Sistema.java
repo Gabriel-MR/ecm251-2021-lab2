@@ -149,7 +149,7 @@ public class Sistema {
                             }
                         }
                     }
-                    break;
+                    menu();
 
                 case 5:
                     int id = 0;
